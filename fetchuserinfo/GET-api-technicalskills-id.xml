@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config" name="GET-api-technicalskills-id" path="/Help/Api/GET-api-technicalskills-id" id="325f83e4-7422-4e40-95ee-f3e8bbf121c2">
+  <con:settings id="ccde0915-2f93-4719-be21-eb009fff97bc">
+    <con:setting id="325f83e4-7422-4e40-95ee-f3e8bbf121c2fileName">GET-api-technicalskills-id</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET-api-technicalskills-id 1" id="1bdc5ade-ee7d-45f0-a103-6a68ea126d75" method="GET">
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>text/html; charset=utf-8</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:element>html</con:element>
+    </con:representation>
+    <con:request name="Request 1" id="525a80f0-dcf6-430a-8acf-e05659f01efc" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://thetestingworldapi.com</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:jmsPropertyConfig/>
+      <con:parameters/>
+      <con:environmentSpec>
+        <con:entry environmentId="2d76a73a-10b3-42ce-8711-bbeba08669d8">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+      </con:environmentSpec>
+    </con:request>
+    <con:environmentSpec>
+      <con:entry environmentId="2d76a73a-10b3-42ce-8711-bbeba08669d8">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+    </con:environmentSpec>
+  </con:method>
+  <con:environmentSpec>
+    <con:entry environmentId="2d76a73a-10b3-42ce-8711-bbeba08669d8">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
+</con:resource>

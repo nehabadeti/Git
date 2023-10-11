@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase xmlns:con="http://eviware.com/soapui/config" id="a3a62ffa-c847-4a2e-bc9f-054e227ffc62" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="getuserinfo-deleteuser Test Case" searchProperties="true" timeout="0">
+  <con:settings id="b1960f44-e694-4414-bded-aa147c487eec">
+    <con:setting id="a3a62ffa-c847-4a2e-bc9f-054e227ffc62fileName">getuserinfo-deleteuser-Test-Case</con:setting>
+  </con:settings>
+  <con:testStep type="restrequest" name="DELETE Request" id="2c294bde-8103-4852-a9d3-1d1c01d25405">
+    <con:settings/>
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" service="https://reqres.in" resourcePath="/api/users/2" methodName="deleteuserinfo" xsi:type="con:RestRequestStep">
+      <con:restRequest name="DELETE Request" id="f7954cae-4a08-43b0-8dc7-1c727aae3489" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://reqres.in</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://reqres.in/api/users/2</con:originalUri>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+        <con:environmentSpec>
+          <con:entry environmentId="2d76a73a-10b3-42ce-8711-bbeba08669d8">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+  <con:environmentSpec>
+    <con:entry environmentId="2d76a73a-10b3-42ce-8711-bbeba08669d8">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
+</con:testCase>

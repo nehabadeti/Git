@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project xmlns:con="http://eviware.com/soapui/config" id="b0eff674-4bae-4b4c-8aea-b4f8175753a5" activeEnvironment="Default environment" name="UserinfoProject" soapui-version="5.7.1" encryptionMode="Not encrypted" projectVersion="" updated="3.48.0" compositeProjectFormat="1.3">
+  <con:settings>
+    <con:setting id="b0eff674-4bae-4b4c-8aea-b4f8175753a5fileName">UserinfoProject-soapui-project</con:setting>
+  </con:settings>
+  <con:requirements/>
+  <con:properties>
+    <con:property>
+      <con:name>TP_username</con:name>
+      <con:value>password</con:value>
+    </con:property>
+  </con:properties>
+  <con:wssContainer/>
+  <con:databaseConnectionContainer/>
+  <con:jmsConnectionContainer/>
+  <con:oAuth2ProfileContainer/>
+  <con:oAuth1ProfileContainer/>
+  <con:environment id="2d76a73a-10b3-42ce-8711-bbeba08669d8" name="QAEnviorment" index="0">
+    <con:property>
+      <con:name>TP_username</con:name>
+      <con:value/>
+    </con:property>
+    <con:databaseConnectionContainer/>
+    <con:jmsConnectionContainer/>
+  </con:environment>
+  <con:authRepository/>
+  <con:environmentSpec>
+    <con:entry environmentId="2d76a73a-10b3-42ce-8711-bbeba08669d8">
+      <con:authProfile>No Authorization</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
+  <con:tags/>
+</con:soapui-project>

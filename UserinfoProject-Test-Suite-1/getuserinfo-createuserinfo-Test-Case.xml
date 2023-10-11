@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase xmlns:con="http://eviware.com/soapui/config" id="e490c4e3-03c0-4f3c-a09b-4e8ac6b0b379" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="getuserinfo-createuserinfo Test Case" searchProperties="true" timeout="0">
+  <con:settings id="ca617896-3e21-471e-a361-3d72f5b10f58">
+    <con:setting id="e490c4e3-03c0-4f3c-a09b-4e8ac6b0b379fileName">getuserinfo-createuserinfo-Test-Case</con:setting>
+  </con:settings>
+  <con:testStep type="restrequest" name="POST Request" id="034f76b9-4e8e-4150-88d3-f3900b468d9b">
+    <con:settings/>
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" service="https://reqres.in" resourcePath="/api/users/2" methodName="post userinfo" xsi:type="con:RestRequestStep">
+      <con:restRequest name="POST Request" id="6797ce54-4a0a-400d-b2c7-faf8658d6f10" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://reqres.in</con:endpoint>
+        <con:request>{
+    "name": "${#TestCase#TC_Username}",
+    "job": "leader",
+    "id": "464",
+    "createdAt": "2023-10-10T14:53:29.250Z"
+}</con:request>
+        <con:originalUri>https://reqres.in/api/users</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="72d43436-8406-4188-b782-318ad4f005b5" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>201</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Simple Contains" id="c34de13a-0fd7-4919-a0f7-3e13689623c5" name="Contains">
+          <con:configuration>
+            <token>leader</token>
+            <ignoreCase>false</ignoreCase>
+            <useRegEx>false</useRegEx>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Simple NotContains" id="9cce26e8-8e94-456a-9ac5-af25de85625a" name="Not Contains">
+          <con:configuration>
+            <token>Test</token>
+            <ignoreCase>false</ignoreCase>
+            <useRegEx>false</useRegEx>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="dd6e689a-6a4f-4b9b-9c89-1d6cde1ce342" name="Response SLA">
+          <con:configuration>
+            <SLA>350</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="HTTP Header Equals" id="68aaf155-e3a9-433f-915d-6873ea476a50" name="HTTP Header Equals">
+          <con:configuration>
+            <Header>Server</Header>
+            <Value>cloudflare</Value>
+            <ignoreCase>false</ignoreCase>
+            <useRegEx>false</useRegEx>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+        <con:parameterOrder/>
+        <con:environmentSpec>
+          <con:entry environmentId="2d76a73a-10b3-42ce-8711-bbeba08669d8">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:properties>
+    <con:property>
+      <con:name>TC_Username</con:name>
+      <con:value>neha</con:value>
+    </con:property>
+    <con:property>
+      <con:name>TC_password</con:name>
+      <con:value>manjari</con:value>
+    </con:property>
+  </con:properties>
+  <con:reportParameters/>
+  <con:environmentSpec>
+    <con:entry environmentId="2d76a73a-10b3-42ce-8711-bbeba08669d8">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
+</con:testCase>

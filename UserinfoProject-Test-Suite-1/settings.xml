@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testSuite xmlns:con="http://eviware.com/soapui/config" id="f747ccd7-ce18-429b-addc-8b238a287261" name="UserinfoProject Test Suite 1">
+  <con:settings id="27ca9c85-dcdc-4a19-94ef-88225f58dac5">
+    <con:setting id="IncludeOverview">true</con:setting>
+    <con:setting id="IncludeResults">true</con:setting>
+    <con:setting id="FlowLayout">false</con:setting>
+    <con:setting id="ErrorDetails">true</con:setting>
+    <con:setting id="IncludeCoverage">true</con:setting>
+    <con:setting id="f747ccd7-ce18-429b-addc-8b238a287261fileName">UserinfoProject-Test-Suite-1</con:setting>
+  </con:settings>
+  <con:runType>SEQUENTIAL</con:runType>
+  <con:properties>
+    <con:property>
+      <con:name>TS_Username</con:name>
+      <con:value>NEHA</con:value>
+    </con:property>
+    <con:property>
+      <con:name>TS_password</con:name>
+      <con:value>MANJARI</con:value>
+    </con:property>
+  </con:properties>
+  <con:reportParameters/>
+  <con:environmentSpec>
+    <con:entry environmentId="2d76a73a-10b3-42ce-8711-bbeba08669d8">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
+</con:testSuite>

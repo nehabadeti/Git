@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase xmlns:con="http://eviware.com/soapui/config" id="48b182aa-6ccc-457a-8b2a-5f165a92b855" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Listuserinfo" searchProperties="true">
+  <con:settings id="9fd9e4a6-3a58-4776-8583-db719f5c7a1c">
+    <con:setting id="48b182aa-6ccc-457a-8b2a-5f165a92b855fileName">Listuserinfo</con:setting>
+  </con:settings>
+  <con:testStep type="restrequest" name="Fetchinfo" id="32c6a0d9-78ba-4697-982c-b643eb598ffd">
+    <con:settings/>
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" service="https://reqres.in" methodName="Users 1" resourcePath="/api/users/2" xsi:type="con:RestRequestStep">
+      <con:restRequest name="Fetchinfo" id="49c4c787-1407-49de-ad41-8f83f3d98935" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://reqres.in</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://reqres.in/api/users</con:originalUri>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:parameters/>
+        <con:parameterOrder/>
+        <con:environmentSpec>
+          <con:entry environmentId="2d76a73a-10b3-42ce-8711-bbeba08669d8">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="createinfo" id="09f20d47-4739-433a-9e1a-71371cac4585">
+    <con:settings/>
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" service="https://reqres.in" methodName="post userinfo" resourcePath="/api/users/2" xsi:type="con:RestRequestStep">
+      <con:restRequest name="createinfo" id="f0d76167-b72c-4d17-a048-f23111fbbe52" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://reqres.in</con:endpoint>
+        <con:request>{
+    "name": "${#Project#TP_username}",
+    "job": "leader",
+    "id": "932",
+    "createdAt": "2023-10-10T14:57:59.068Z"
+}</con:request>
+        <con:originalUri>https://reqres.in/api/users/2</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="d71728bf-9aad-4d2a-a664-45d2b0e707e7" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="a5054a61-2f54-4da0-86ae-18c31a775833" name="Response SLA">
+          <con:configuration>
+            <SLA>200</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+        <con:parameterOrder/>
+        <con:environmentSpec>
+          <con:entry environmentId="2d76a73a-10b3-42ce-8711-bbeba08669d8">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="updateinfo" id="b99fd9af-8621-4290-805b-e3eff48a5feb">
+    <con:settings/>
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" service="https://reqres.in" methodName="updateuserinfo" resourcePath="/api/users/2" xsi:type="con:RestRequestStep">
+      <con:restRequest name="updateinfo" id="fc27db26-0713-4bc6-8412-649b71362a53" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://reqres.in</con:endpoint>
+        <con:request>{
+    "name": "${#Project#TP_username}",
+    "job": "zion resident",
+    "updatedAt": "2023-10-10T14:58:47.452Z"
+}</con:request>
+        <con:originalUri>https://reqres.in/api/users/2</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="755e9faa-111b-4a47-9710-5dfabb803158" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="0c3bce30-8e35-422d-bfbd-88dac6a9394b" name="Response SLA">
+          <con:configuration>
+            <SLA>200</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+        <con:environmentSpec>
+          <con:entry environmentId="2d76a73a-10b3-42ce-8711-bbeba08669d8">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="deletuser" id="128210df-3b02-40e7-91a9-3aa5b0aeed11">
+    <con:settings/>
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" service="https://reqres.in" methodName="deleteuserinfo" resourcePath="/api/users/2" xsi:type="con:RestRequestStep">
+      <con:restRequest name="deletuser" id="c864251c-921a-4872-ba7d-47f3c2f7a94a" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://reqres.in</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://reqres.in/api/users/2</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="6e268399-50b1-4230-8e93-11e1d303fd63" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="d8e6c97d-7d66-4e58-9436-71da22787ee5" name="Response SLA">
+          <con:configuration>
+            <SLA>200</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+        <con:environmentSpec>
+          <con:entry environmentId="2d76a73a-10b3-42ce-8711-bbeba08669d8">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:properties>
+    <con:property>
+      <con:name>TC_username</con:name>
+      <con:value>password</con:value>
+    </con:property>
+  </con:properties>
+  <con:reportParameters/>
+  <con:environmentSpec>
+    <con:entry environmentId="2d76a73a-10b3-42ce-8711-bbeba08669d8">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
+</con:testCase>

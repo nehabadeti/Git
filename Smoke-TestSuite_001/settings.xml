@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testSuite xmlns:con="http://eviware.com/soapui/config" id="7bcd648e-5f44-4ec2-a598-5a2d6573cf25" name="Smoke TestSuite_001">
+  <con:settings id="50ffec78-12e6-4242-a1de-2169d20fd9fc">
+    <con:setting id="7bcd648e-5f44-4ec2-a598-5a2d6573cf25fileName">Smoke-TestSuite_001</con:setting>
+  </con:settings>
+  <con:runType>SEQUENTIAL</con:runType>
+  <con:properties>
+    <con:property>
+      <con:name>TS</con:name>
+      <con:value/>
+    </con:property>
+  </con:properties>
+  <con:reportParameters/>
+  <con:environmentSpec>
+    <con:entry environmentId="2d76a73a-10b3-42ce-8711-bbeba08669d8">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
+</con:testSuite>

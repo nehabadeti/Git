@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase xmlns:con="http://eviware.com/soapui/config" id="e0c72f22-d2fb-4d99-a3bf-3601743c45a0" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="getuserinfo-updateuser Test Case" searchProperties="true" timeout="0">
+  <con:settings id="3f53a233-3232-4503-a5b7-e15faca25c05">
+    <con:setting id="e0c72f22-d2fb-4d99-a3bf-3601743c45a0fileName">getuserinfo-updateuser-Test-Case</con:setting>
+  </con:settings>
+  <con:testStep type="restrequest" name="PUT Request" id="c2ff0c89-9bf2-47de-9131-b5dfa672307b">
+    <con:settings/>
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" service="https://reqres.in" resourcePath="/api/users/2" methodName="updateuserinfo" xsi:type="con:RestRequestStep">
+      <con:restRequest name="PUT Request" id="2349a083-972b-481f-b07f-add3274e9db7" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://reqres.in</con:endpoint>
+        <con:request>{
+    "name": "${#TestSuite#TS_password}",
+    "job": "zion resident",
+    "updatedAt": "2023-10-10T14:55:00.931Z"
+}</con:request>
+        <con:originalUri>https://reqres.in/api/users/2</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="ef745661-09c7-4ec7-88b9-568b9b85e984" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+        <con:environmentSpec>
+          <con:entry environmentId="2d76a73a-10b3-42ce-8711-bbeba08669d8">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:properties>
+    <con:property>
+      <con:name>TS_Username</con:name>
+      <con:value>Manjari</con:value>
+    </con:property>
+    <con:property>
+      <con:name>password</con:name>
+      <con:value>Neha</con:value>
+    </con:property>
+  </con:properties>
+  <con:reportParameters/>
+  <con:environmentSpec>
+    <con:entry environmentId="2d76a73a-10b3-42ce-8711-bbeba08669d8">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
+</con:testCase>
