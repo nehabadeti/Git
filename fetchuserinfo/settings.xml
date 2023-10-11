@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <con:interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config" xsi:type="con:RestService" id="2d7666c9-44dc-483a-b217-990fd79cac5e" wadlVersion="http://wadl.dev.java.net/2009/02" name="fetchuserinfo" type="rest">
-  <con:settings id="ece7a826-f7b3-4b4b-84ef-20c193ad318f">
+  <con:settings id="c6ac05f7-d083-46db-bfe9-d1ac60ce761f">
     <con:setting id="2d7666c9-44dc-483a-b217-990fd79cac5efileName">fetchuserinfo</con:setting>
   </con:settings>
   <con:definitionCache/>

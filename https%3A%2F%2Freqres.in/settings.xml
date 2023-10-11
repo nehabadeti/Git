@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <con:interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config" xsi:type="con:RestService" id="9d3df0da-3b7c-4d84-9513-21c69a082f1b" wadlVersion="http://wadl.dev.java.net/2009/02" name="https://reqres.in" type="rest">
-  <con:settings id="80b4d638-b2f3-49e2-8add-51db4b294c3c">
+  <con:settings id="4a9e4b8a-0aef-411a-90fd-82ecfc7dc262">
     <con:setting id="9d3df0da-3b7c-4d84-9513-21c69a082f1bfileName">https%3A%2F%2Freqres.in</con:setting>
   </con:settings>
   <con:definitionCache type="TEXT" rootPart=""/>
