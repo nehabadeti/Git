@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testSuite xmlns:con="http://eviware.com/soapui/config" id="7212efed-0e11-46d1-8971-281cbeef95da" name="Swagger Test Suite">
+  <con:settings id="f8f9d13c-22b0-4367-827f-6400ed873f97">
+    <con:setting id="7212efed-0e11-46d1-8971-281cbeef95dafileName">Swagger-Test-Suite</con:setting>
+  </con:settings>
+  <con:runType>SEQUENTIAL</con:runType>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testSuite>
