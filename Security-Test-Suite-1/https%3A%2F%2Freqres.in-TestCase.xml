@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="8ec28952-8a1b-4a3d-813d-7683c26be37a" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="https://reqres.in TestCase" searchProperties="true" timeout="0">
+  <con:settings id="332af792-e34e-4ff1-99f8-4f0695d9cd2c">
+    <con:setting id="8ec28952-8a1b-4a3d-813d-7683c26be37afileName">https%3A%2F%2Freqres.in-TestCase</con:setting>
+  </con:settings>
+  <con:testStep type="restrequest" name="GET" id="24d04d94-d5aa-4caa-a117-8e8352b4247a">
+    <con:settings/>
+    <con:config service="https://reqres.in" resourcePath="/api/users/2" methodName="Users 1" xsi:type="con:RestRequestStep">
+      <con:restRequest name="GET" id="8521db16-cc56-4d5f-878e-cf9bb952659a" mediaType="application/json">
+        <con:settings/>
+        <con:endpoint>https://reqres.in</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://reqres.in/api/users/2</con:originalUri>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:parameters/>
+        <con:parameterOrder/>
+        <con:environmentSpec>
+          <con:entry environmentId="2d76a73a-10b3-42ce-8711-bbeba08669d8">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="POST" id="7dc53a31-5cb0-4d57-a525-b409674ffeb7">
+    <con:settings/>
+    <con:config service="https://reqres.in" resourcePath="/api/users/2" methodName="post userinfo" xsi:type="con:RestRequestStep">
+      <con:restRequest name="POST" id="6797ce54-4a0a-400d-b2c7-faf8658d6f10" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://reqres.in</con:endpoint>
+        <con:request>{
+    "name": "morpheus",
+    "job": "leader",
+    "id": "464",
+    "createdAt": "2023-10-10T14:53:29.250Z"
+}</con:request>
+        <con:originalUri>https://reqres.in/api/users</con:originalUri>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+        <con:parameterOrder/>
+        <con:environmentSpec>
+          <con:entry environmentId="2d76a73a-10b3-42ce-8711-bbeba08669d8">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="PUT" id="8be8aed1-7a02-4376-a66b-45ca714a1ed0">
+    <con:settings/>
+    <con:config service="https://reqres.in" resourcePath="/api/users/2" methodName="updateuserinfo" xsi:type="con:RestRequestStep">
+      <con:restRequest name="PUT" id="2349a083-972b-481f-b07f-add3274e9db7" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://reqres.in</con:endpoint>
+        <con:request>{
+    "name": "morpheus",
+    "job": "zion resident",
+    "updatedAt": "2023-10-10T14:55:00.931Z"
+}</con:request>
+        <con:originalUri>https://reqres.in/api/users/2</con:originalUri>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+        <con:environmentSpec>
+          <con:entry environmentId="2d76a73a-10b3-42ce-8711-bbeba08669d8">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="DELETE" id="d0c1d5a2-a35a-4908-8199-09697f4cf5b1">
+    <con:settings/>
+    <con:config service="https://reqres.in" resourcePath="/api/users/2" methodName="deleteuserinfo" xsi:type="con:RestRequestStep">
+      <con:restRequest name="DELETE" id="f7954cae-4a08-43b0-8dc7-1c727aae3489" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://reqres.in</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://reqres.in/api/users/2</con:originalUri>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+        <con:environmentSpec>
+          <con:entry environmentId="2d76a73a-10b3-42ce-8711-bbeba08669d8">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>

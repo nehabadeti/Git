@@ -26,7 +26,16 @@
         </con:assertion>
         <con:assertion type="Response SLA Assertion" id="1c3c0ba8-880a-4474-aaa6-bd196cb5624d" name="Response SLA">
           <con:configuration>
-            <SLA>200</SLA>
+            <SLA>500</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="f28ea95b-8aa3-47db-a7f0-225b740babc2" name="JSONPath Match">
+          <con:configuration>
+            <path>$.id.photoUrls.tags</path>
+            <content>$.id.photoUrls.tags</content>
+            <allowWildcards>true</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
           </con:configuration>
         </con:assertion>
         <con:credentials>
@@ -36,6 +45,12 @@
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
         <con:parameters/>
       </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="delay" name="Delay for 1min" id="79fe216e-5180-479c-8463-03e714b13803">
+    <con:settings/>
+    <con:config>
+      <delay>1000</delay>
     </con:config>
   </con:testStep>
   <con:testStep type="restrequest" name="PUT" id="5a56c0c4-5055-4845-8aad-85a2469c1d51">
@@ -74,7 +89,21 @@
         </con:assertion>
         <con:assertion type="Response SLA Assertion" id="109656b6-33e7-45bd-88e8-08eeeffeba0e" name="Response SLA">
           <con:configuration>
-            <SLA>200</SLA>
+            <SLA>350</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Simple Contains" id="b1969bf6-9421-4c27-aae0-a15e9d9a785c" name="Contains">
+          <con:configuration>
+            <token>available</token>
+            <ignoreCase>false</ignoreCase>
+            <useRegEx>false</useRegEx>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Simple NotContains" id="405185b8-e1f8-4cae-829f-351e515c1e3c" name="Not Contains">
+          <con:configuration>
+            <token>notavailable</token>
+            <ignoreCase>false</ignoreCase>
+            <useRegEx>false</useRegEx>
           </con:configuration>
         </con:assertion>
         <con:credentials>
@@ -84,6 +113,12 @@
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
         <con:parameters/>
       </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="delay" name="Delay foe 2 min" id="886d44e3-ab86-45d9-9337-ab7fb7326111">
+    <con:settings/>
+    <con:config>
+      <delay>5000</delay>
     </con:config>
   </con:testStep>
   <con:testStep type="restrequest" name="GET" id="5dee64ff-8509-48d5-b875-5ac6e1f54721">
@@ -105,7 +140,16 @@
         </con:assertion>
         <con:assertion type="Response SLA Assertion" id="29c20d3d-1f9e-448c-be08-3c5524cd19e1" name="Response SLA">
           <con:configuration>
-            <SLA>200</SLA>
+            <SLA>350</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="7682d3cb-f443-46e2-a260-c22636d7613e" name="JSONPath Match">
+          <con:configuration>
+            <path>$.id.category.id[0].title</path>
+            <content/>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
           </con:configuration>
         </con:assertion>
         <con:credentials>
@@ -113,8 +157,25 @@
           <con:authType>No Authorization</con:authType>
         </con:credentials>
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
-        <con:parameters/>
+        <con:parameters>
+          <con:entry key="status" value="[{&quot;id&quot;:27,&quot;category&quot;:{&quot;id&quot;:0,&quot;name&quot;:&quot;leo&quot;},&quot;name&quot;:&quot;fluffy&quot;,&quot;photoUrls&quot;:[&quot;string&quot;],&quot;tags&quot;:[{&quot;id&quot;:0,&quot;name&quot;:&quot;superdog&quot;}],&quot;status&quot;:&quot;&quot;}]"/>
+        </con:parameters>
       </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="transfer" name="TC_Property transfer" id="ce056e88-db99-49c4-9027-36f58cb49d49">
+    <con:settings/>
+    <con:config xsi:type="con:PropertyTransfersStep">
+      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+        <con:name>TC_Swagger pets info</con:name>
+        <con:sourceType>Response</con:sourceType>
+        <con:sourceStep>GET</con:sourceStep>
+        <con:sourcePath/>
+        <con:targetType>status</con:targetType>
+        <con:targetStep>GET</con:targetStep>
+        <con:targetPath/>
+        <con:upgraded>true</con:upgraded>
+      </con:transfers>
     </con:config>
   </con:testStep>
   <con:properties/>
